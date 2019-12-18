@@ -65,8 +65,8 @@ void visualizza(nodo_t* testa){
 
 nodo_t* ordina(nodo_t* testa){
   if (testa && testa->next) {
-  for(nodo_t* pi = testa; pi->next->capo!=true; pi=pi->next){ //scansiona tutto l'array tranne l'ultima componente: n - 1 escluso. Quindi fino al penultimo elemento.
-    for (nodo_t *pj = pi->next; pj->capo!=true; pj=pj->next){ //j settato all'ultima componente e decresce ad ogni iterazione. Esce dal ciclo solo se j <= i
+  for(nodo_t* pi = testa; pi->next->capo!=true; pi=pi->next){
+    for (nodo_t *pj = pi->next; pj->capo!=true; pj=pj->next){ 
                 if (pj->val < pi->val){
                   int app=pi->val;
                   pi->val=pj->val;
